@@ -1,0 +1,109 @@
+.blur {
+  display: none;
+}
+
+.blur.active {
+  display: block;
+  width: calc(100% - 200px);
+  height: 100vh;
+  z-index: 15;
+  position: fixed;
+  top: 0;
+  right: 0;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -moz-backdrop-filter: blur(10px);
+  -o-backdrop-filter: blur(10px);
+  -ms-backdrop-filter: blur(10px);
+}
+
+.lock {
+  overflow: hidden;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (max-width: 1000px) {
+  .headerContainer {
+    justify-content: space-between;
+    padding: 0rem 2rem;
+  }
+}
+@media (max-width: 735px) {
+  .headerContainer {
+    display: none;
+  }
+}
+
+@media (max-width: 735px) {
+  .navbar {
+    display: flex;
+    width: 200px;
+    height: 100vh;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 0;
+    padding-left: 1rem;
+  }
+}
+
+@media (max-height: 410px) {
+  .navbar > .nav {
+    padding-top: 4rem;
+  }
+  .navbar > .toggleGroup {
+    padding-top: 1rem;
+  }
+}
+
+.snakeWrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.snakeImg {
+  width: 170px;
+  border-radius: 50%;
+  animation: App-logo-spin infinite 1.5s running;
+}
+
+@keyframes App-logo-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.buttonMain {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
